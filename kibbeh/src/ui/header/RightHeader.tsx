@@ -1,5 +1,15 @@
+import { User } from "@dogehouse/kebab";
+import { useRouter } from "next/router";
 import React from "react";
+import { useCurrentRoomIdStore } from "../../global-stores/useCurrentRoomIdStore";
 import { SolidMegaphone, SolidMessages, SolidNotification } from "../../icons";
+import { useTokenStore } from "../../modules/auth/useTokenStore";
+import { closeVoiceConnections } from "../../modules/webrtc/WebRtcApp";
+import { modalConfirm } from "../../shared-components/ConfirmModal";
+import { useConn } from "../../shared-hooks/useConn";
+import { useTypeSafeTranslation } from "../../shared-hooks/useTypeSafeTranslation";
+import { DropdownController } from "../DropdownController";
+import { SettingsDropdown } from "../SettingsDropdown";
 import { SingleUser } from "../UserAvatar";
 
 export interface RightHeaderProps {
@@ -13,18 +23,19 @@ export interface RightHeaderProps {
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ) => null;
   actionButton?: React.ReactNode;
-  avatarImg: string;
 }
 
-export const RightHeader: React.FC<RightHeaderProps> = ({
-  avatarImg,
+const RightHeader: React.FC<RightHeaderProps> = ({
   actionButton,
   onAnnouncementsClick,
   onMessagesClick,
   onNotificationsClick,
 }) => {
+  const { close: closeWs, user } = useConn();
+  const { push } = useRouter();
+  const { t } = useTypeSafeTranslation()
   return (
-    <div className="space-x-4 items-center justify-end">
+    <div className="space-x-4 items-center justify-end focus:outline-no-chrome w-full">
       {onAnnouncementsClick && (
         <button onClick={onAnnouncementsClick}>
           <SolidMegaphone width={23} height={23} className="text-primary-200" />
@@ -45,7 +56,33 @@ export const RightHeader: React.FC<RightHeaderProps> = ({
         </button>
       )}
       {actionButton}
-      <SingleUser size="sm" src={avatarImg} />
+      <DropdownController
+        overlay={(close) => (
+          <SettingsDropdown
+            onActionButtonClicked={() => {
+              modalConfirm(t("components.settingsDropdown.logOut.modalSubtitle"), () => {
+                closeWs();
+                closeVoiceConnections(null);
+                useCurrentRoomIdStore.getState().setCurrentRoomId(null);
+                useTokenStore
+                  .getState()
+                  .setTokens({ accessToken: "", refreshToken: "" });
+                push("/logout");
+              });
+            }}
+            onCloseDropdown={close}
+            user={user}
+          />
+        )}
+      >
+        <SingleUser
+          className={"focus:outline-no-chrome"}
+          size="sm"
+          src={user.avatarUrl}
+        />
+      </DropdownController>
     </div>
   );
 };
+
+export default RightHeader;

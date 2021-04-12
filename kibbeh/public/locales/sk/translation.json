@@ -37,7 +37,11 @@
       "startPrivateRoom": "začať s nimi súkromnú miestnosť"
     },
     "followList": { "followHim": "Sledovať", "followingHim": "Sledovaný" },
-    "home": { "createRoom": "Vytvoriť miestnosť", "refresh": "Obnoviť" },
+    "home": {
+      "createRoom": "Vytvoriť miestnosť",
+      "refresh": "Obnoviť",
+      "editRoom": "Edit Room"
+    },
     "inviteList": {
       "roomGone": "miestnosť je fuč, vráť sa",
       "shareRoomLink": "zdieľať odkaz miestnosti",
@@ -62,7 +66,8 @@
       "voiceSettings": "otvoriť nastavenia hlasu",
       "soundSettings": "otvoriť nastavenia zvuku",
       "deleteAccount": "odstrániť účet",
-      "overlaySettings": "otvoriť nastavenia prekresľovania"
+      "overlaySettings": "otvoriť nastavenia prekresľovania",
+      "couldNotFindUser": "Sorry, we could not find that user"
     },
     "notFound": {
       "whoopsError": "Uups! Táto stránka sa stratila v konverzácii.",
@@ -164,7 +169,8 @@
         "roomName": "názov miestnosti",
         "roomDescription": "popis miestnosti",
         "descriptionError": "maximálna dĺžka je 500 znakov",
-        "nameError": "počet znakov musí byť medzi 2-60"
+        "nameError": "počet znakov musí byť medzi 2-60",
+        "subtitle": "Fill the following fields to start a new room"
       },
       "invitedToJoinRoomModal": {
         "newRoomCreated": "Vytvorená nová miestnosť",
@@ -200,7 +206,30 @@
       "roomSettingsModal": {
         "requirePermission": "Poslucháči musia požiadať o povolenie rozprávať",
         "makePublic": "zverejniť miestnosť",
-        "makePrivate": "zosúkromniť miestnosť"
+        "makePrivate": "zosúkromniť miestnosť",
+        "renamePublic": "Set public room name",
+        "renamePrivate": "Set private room name"
+      }
+    },
+    "followingOnline": {
+      "people": "People",
+      "online": "ONLINE",
+      "noOnline": "You have 0 friends online right now",
+      "showMore": "Show more"
+    },
+    "upcomingRoomsCard": {
+      "upcomingRooms": "Upcoming rooms",
+      "exploreMoreRooms": "Explore More Rooms"
+    },
+    "search": { "placeholder": "Search for rooms, users or categories" },
+    "settingsDropdown": {
+      "profile": "Profile",
+      "language": "Language",
+      "reportABug": "Report A Bug",
+      "useOldVersion": "Use Old Version",
+      "logOut": {
+        "button": "Log out",
+        "modalSubtitle": "Are you sure you want to logout?"
       }
     }
   },
@@ -244,6 +273,7 @@
       "approachingGalaxy": "Blížime sa ku galaxii",
       "galacticDoge": "Galaktický Doge",
       "spottedLife": "Zahliadnutá planéta so životom"
-    }
+    },
+    "feed": { "yourFeed": "Your Feed" }
   }
 }

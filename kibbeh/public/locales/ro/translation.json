@@ -38,7 +38,11 @@
       "startPrivateRoom": "Începe o cameră privată cu ei"
     },
     "followList": { "followHim": "follow", "followingHim": "following" },
-    "home": { "createRoom": "Creează cameră", "refresh": "Refresh" },
+    "home": {
+      "createRoom": "Creează cameră",
+      "refresh": "Refresh",
+      "editRoom": "Edit Room"
+    },
     "inviteList": {
       "roomGone": "Camera a dispărut, du-te înapoi",
       "shareRoomLink": "Distribuie link-ul camerei",
@@ -63,7 +67,8 @@
       "voiceSettings": "Mergi la setările de voce",
       "soundSettings": "Mergi la setările de sunet",
       "deleteAccount": "Şterge cont",
-      "overlaySettings": "go to overlay settings"
+      "overlaySettings": "go to overlay settings",
+      "couldNotFindUser": "Sorry, we could not find that user"
     },
     "notFound": {
       "whoopsError": "Ups! Această pagină a fost pierdută în conversație.",
@@ -162,7 +167,8 @@
         "roomName": "Nume Cameră",
         "roomDescription": "Descriere cameră",
         "descriptionError": "Lungime maximă de 500",
-        "nameError": "Trebuie să fie între 2 și 60 caractere"
+        "nameError": "Trebuie să fie între 2 și 60 caractere",
+        "subtitle": "Fill the following fields to start a new room"
       },
       "invitedToJoinRoomModal": {
         "newRoomCreated": "Nouă Cameră Creată",
@@ -198,7 +204,30 @@
       "roomSettingsModal": {
         "requirePermission": "Necesită permisiunea de a vorbi",
         "makePublic": "Fă camera publică",
-        "makePrivate": "Fă camera privată"
+        "makePrivate": "Fă camera privată",
+        "renamePublic": "Set public room name",
+        "renamePrivate": "Set private room name"
+      }
+    },
+    "followingOnline": {
+      "people": "People",
+      "online": "ONLINE",
+      "noOnline": "You have 0 friends online right now",
+      "showMore": "Show more"
+    },
+    "upcomingRoomsCard": {
+      "upcomingRooms": "Upcoming rooms",
+      "exploreMoreRooms": "Explore More Rooms"
+    },
+    "search": { "placeholder": "Search for rooms, users or categories" },
+    "settingsDropdown": {
+      "profile": "Profile",
+      "language": "Language",
+      "reportABug": "Report A Bug",
+      "useOldVersion": "Use Old Version",
+      "logOut": {
+        "button": "Log out",
+        "modalSubtitle": "Are you sure you want to logout?"
       }
     }
   },
@@ -242,6 +271,7 @@
       "approachingGalaxy": "Approaching galaxy",
       "galacticDoge": "Galactic Doge",
       "spottedLife": "Planet with life spotted"
-    }
+    },
+    "feed": { "yourFeed": "Your Feed" }
   }
 }

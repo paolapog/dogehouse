@@ -6,7 +6,7 @@ import { Button } from "./Button";
 import { DurationTicker } from "./DurationTicker";
 import SvgSolidMicrophoneOff from "../icons/SolidMicrophoneOff";
 
-interface MinimizedRoomCardProps {
+export interface MinimizedRoomCardProps {
   onFullscreenClick?: () => void;
   leaveLoading?: boolean;
   room: {
@@ -31,10 +31,15 @@ export const MinimizedRoomCard: React.FC<MinimizedRoomCardProps> = ({
 }) => {
   // gap-n only works with grid
   return (
-    <div className="bg-primary-800 border border-accent rounded-lg p-4 gap-4 grid max-w-md">
+    <div
+      className="bg-primary-800 border border-accent rounded-lg p-4 gap-4 grid max-w-md"
+      data-testid="minimized-room-card"
+    >
       <div className="gap-1 grid">
-        <h4 className="text-primary-100">{room.name}</h4>
-        <p className="text-primary-300">{room.speakers.join(", ")}</p>
+        <h4 className="text-primary-100 break-all">{room.name}</h4>
+        <p className="text-primary-300 overflow-ellipsis overflow-hidden w-auto">
+          {room.speakers.join(", ")}
+        </p>
         <p className="text-accent">
           {room.myself.isSpeaker ? "Speaker" : "Listener"} ·{" "}
           <DurationTicker dt={room.roomStartedAt} />
@@ -43,13 +48,15 @@ export const MinimizedRoomCard: React.FC<MinimizedRoomCardProps> = ({
       <div className="flex flex-row">
         <div className="grid grid-cols-3 gap-2">
           <BoxedIcon
+            transition
+            hover={room.myself.isMuted}
             onClick={room.myself.switchMuted}
             className={room.myself.isMuted ? "bg-accent" : ""}
           >
             {room.myself.isMuted ? (
-              <SvgSolidMicrophoneOff />
+              <SvgSolidMicrophoneOff data-testid="mic-off-icon" />
             ) : (
-              <SolidMicrophone />
+              <SolidMicrophone data-testid="mic-icon" />
             )}
           </BoxedIcon>
           {/* <BoxedIcon
@@ -58,11 +65,12 @@ export const MinimizedRoomCard: React.FC<MinimizedRoomCardProps> = ({
           >
             <SolidVolume />
           </BoxedIcon> */}
-          <BoxedIcon onClick={onFullscreenClick}>
+          <BoxedIcon transition onClick={onFullscreenClick}>
             <SolidFullscreen />
           </BoxedIcon>
         </div>
         <Button
+          transition
           loading={leaveLoading}
           className="flex-grow ml-4"
           onClick={room.myself.leave}

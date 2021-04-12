@@ -14,3 +14,11 @@ _
 .env.local
 kebab/lib
 yarn-error.log
+
+dist
+.yarn
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+.pnp.*

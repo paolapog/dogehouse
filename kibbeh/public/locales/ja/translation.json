@@ -38,7 +38,11 @@
       "startPrivateRoom": "非公開ルームを開始"
     },
     "followList": { "followHim": "follow", "followingHim": "following" },
-    "home": { "createRoom": "ルーム作成", "refresh": "更新" },
+    "home": {
+      "createRoom": "ルーム作成",
+      "refresh": "更新",
+      "editRoom": "Edit Room"
+    },
     "inviteList": {
       "roomGone": "ルームが削除されました。前のページに戻ります",
       "shareRoomLink": "リンクを共有",
@@ -63,7 +67,8 @@
       "voiceSettings": "マイク設定",
       "soundSettings": "スピーカー設定",
       "deleteAccount": "アカウント削除",
-      "overlaySettings": "go to overlay settings"
+      "overlaySettings": "go to overlay settings",
+      "couldNotFindUser": "Sorry, we could not find that user"
     },
     "notFound": {
       "whoopsError": "おっと！？ このページは会話に紛れてしまいました。",
@@ -157,7 +162,8 @@
         "roomName": "名前",
         "roomDescription": "説明",
         "descriptionError": "500文字以内",
-        "nameError": "2文字から60文字で設定してください"
+        "nameError": "2文字から60文字で設定してください",
+        "subtitle": "Fill the following fields to start a new room"
       },
       "invitedToJoinRoomModal": {
         "newRoomCreated": "ルームが作成されました",
@@ -193,7 +199,30 @@
       "roomSettingsModal": {
         "requirePermission": "発言を許可制にする",
         "makePublic": "ルームを公開に変更",
-        "makePrivate": "ルームを非公開に変更"
+        "makePrivate": "ルームを非公開に変更",
+        "renamePublic": "Set public room name",
+        "renamePrivate": "Set private room name"
+      }
+    },
+    "followingOnline": {
+      "people": "People",
+      "online": "ONLINE",
+      "noOnline": "You have 0 friends online right now",
+      "showMore": "Show more"
+    },
+    "upcomingRoomsCard": {
+      "upcomingRooms": "Upcoming rooms",
+      "exploreMoreRooms": "Explore More Rooms"
+    },
+    "search": { "placeholder": "Search for rooms, users or categories" },
+    "settingsDropdown": {
+      "profile": "Profile",
+      "language": "Language",
+      "reportABug": "Report A Bug",
+      "useOldVersion": "Use Old Version",
+      "logOut": {
+        "button": "Log out",
+        "modalSubtitle": "Are you sure you want to logout?"
       }
     }
   },
@@ -237,6 +266,7 @@
       "approachingGalaxy": "まもなく銀河系",
       "galacticDoge": "銀河系犬 / Galactic Doge",
       "spottedLife": "新たな生命を発見"
-    }
+    },
+    "feed": { "yourFeed": "Your Feed" }
   }
 }

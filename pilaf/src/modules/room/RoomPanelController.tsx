@@ -1,83 +1,85 @@
 import { JoinRoomAndGetInfoResponse } from "@dogehouse/kebab";
-import React, { useEffect } from "react";
-import { ActivityIndicator, Text, View } from "react-native";
-// import { ErrorToast } from "../../ui/ErrorToast";
-import Toast from "react-native-toast-message";
-import { TitledHeader } from "../../components/header/TitledHeader";
-import { colors, h4, paragraph } from "../../constants/dogeStyle";
-import { useCurrentRoomStore } from "../../global-stores/useCurrentRoomStore";
-import { isUuid } from "../../lib/isUuid";
+import { useNavigation } from "@react-navigation/core";
+import { RouteProp } from "@react-navigation/native";
+import React from "react";
+import { ScrollView, StyleSheet, View } from "react-native";
+import { validate as uuidValidate } from "uuid";
+import { RoomHeader } from "../../components/header/RoomHeader";
+import { colors } from "../../constants/dogeStyle";
+import { useCurrentRoomIdStore } from "../../global-stores/useCurrentRoomIdStore";
+import { RoomStackParamList } from "../../navigation/mainNavigator/RoomNavigator";
+import { useTypeSafeMutation } from "../../shared-hooks/useTypeSafeMutation";
 import { useTypeSafeQuery } from "../../shared-hooks/useTypeSafeQuery";
+import { RoomUsersPanel } from "./RoomUsersPanel";
 
-interface RoomPanelControllerProps {
-  roomId?: string | undefined;
-}
+type RoomPageRouteProp = RouteProp<RoomStackParamList, "RoomMain">;
 
-const placeHolder = (
-  <View
-    style={{
-      flex: 1,
-      backgroundColor: colors.primary900,
-    }}
-  >
-    <TitledHeader title={""} showBackButton={true} />
-    <ActivityIndicator color={colors.text} />
-  </View>
-);
+type RoomPageProps = {
+  route: RoomPageRouteProp;
+};
 
-export const RoomPanelController: React.FC<RoomPanelControllerProps> = ({
-  roomId,
-}) => {
-  const { currentRoom, setCurrentRoom } = useCurrentRoomStore();
+export const RoomPanelController: React.FC<RoomPageProps> = ({ route }) => {
+  const { mutateAsync: leaveRoom } = useTypeSafeMutation("leaveRoom");
+  const navigation = useNavigation();
+  const { setCurrentRoomId } = useCurrentRoomIdStore();
   const { data } = useTypeSafeQuery(
-    ["joinRoomAndGetInfo", currentRoom?.id || ""],
+    ["joinRoomAndGetInfo", route.params.data.room.id || ""],
     {
-      refetchOnMount: "always",
-      enabled: isUuid(roomId),
+      enabled: uuidValidate(route.params.data.room.id),
       onSuccess: ((d: JoinRoomAndGetInfoResponse | { error: string }) => {
         if (!("error" in d)) {
-          setCurrentRoom(() => d.room);
+          setCurrentRoomId(() => d.room.id);
         }
       }) as any,
     },
-    [roomId]
+    [route.params.data.room.id]
   );
-  if (!data) {
-    // @todo add error handling
-    console.log("return firsst");
-    return placeHolder;
+
+  if (!data || "error" in data) {
+    return null;
   }
 
-  // @todo start using error codes
-  if ("error" in data) {
-    // @todo replace with real design
-    useEffect(() => {
-      Toast.show({
-        type: "error",
-        text1: "Something went wrong",
-      });
-    }, []);
-    return <View />;
-  }
-
-  if (!currentRoom) {
-    // return null;
-    return placeHolder;
-  }
-
-  if (currentRoom.id !== roomId) {
-    return placeHolder;
-  }
-
-  const roomCreator = data?.users.find((x) => x.id === currentRoom.creatorId);
-  //return placeHolder;
   return (
-    <View style={{ flex: 1, backgroundColor: colors.primary900 }}>
-      <TitledHeader title={currentRoom.name} showBackButton={true} />
-      <Text style={{ ...paragraph }}>{currentRoom.description}</Text>
-      <Text style={{ ...paragraph }}>{roomCreator.username}</Text>
-      <Text style={{ ...paragraph }}>Waiting for design information</Text>
-      <Text style={{ ...paragraph }}>{roomId}</Text>
-    </View>
+    <>
+      <View style={{ flex: 1, backgroundColor: colors.primary900 }}>
+        <RoomHeader
+          onLeavePress={() => {
+            leaveRoom([]);
+            setCurrentRoomId(null);
+            navigation.navigate("Home");
+          }}
+          onTitlePress={() => {
+            navigation.navigate("RoomDescription", { data: data });
+          }}
+          roomTitle={data.room.name}
+          roomSubtitle={data.room.peoplePreviewList
+            .filter((u) => u.id === data.room.creatorId)
+            .map((u) => u.displayName)
+            .join(", ")}
+        />
+        <ScrollView
+          style={styles.scrollView}
+          contentContainerStyle={[styles.avatarsContainer]}
+        >
+          <RoomUsersPanel {...data} />
+        </ScrollView>
+      </View>
+      {/* <UserPreviewModal {...route.params} /> */}
+    </>
   );
 };
+
+const styles = StyleSheet.create({
+  scrollView: {
+    padding: 20,
+    flex: 1,
+  },
+  avatarsContainer: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+  },
+  avatar: {
+    marginRight: 10,
+    marginBottom: 10,
+  },
+});

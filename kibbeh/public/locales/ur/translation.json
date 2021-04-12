@@ -38,7 +38,11 @@
       "startPrivateRoom": "ان کے ساتھ ایک نجی روم شروع کریں"
     },
     "followList": { "followHim": "follow", "followingHim": "following" },
-    "home": { "createRoom": "روم بنائیں", "refresh": "ریفریش" },
+    "home": {
+      "createRoom": "روم بنائیں",
+      "refresh": "ریفریش",
+      "editRoom": "Edit Room"
+    },
     "inviteList": {
       "roomGone": "یہ روم اب موجود نہیں ہے",
       "shareRoomLink": "روم کی لنک شیئر کریں",
@@ -53,8 +57,8 @@
       "featureText_4": "Open Source",
       "featureText_5": "Text Chat",
       "featureText_6": "Powered by Doge",
-      "loginGithub": "login with GitHub",
-      "loginTwitter": "login with Twitter",
+      "loginGithub": "log in with GitHub",
+      "loginTwitter": "log in with Twitter",
       "createTestUser": "create test user"
     },
     "myProfile": {
@@ -63,7 +67,8 @@
       "voiceSettings": "اکاؤنٹ کی ترتیبات پر جائیں",
       "soundSettings": "آواز کی ترتیبات پر جائیں",
       "deleteAccount": "اکاؤنٹ ہمیشہ کے لئے ڈیلیٹ کریں",
-      "overlaySettings": "go to overlay settings"
+      "overlaySettings": "go to overlay settings",
+      "couldNotFindUser": "Sorry, we could not find that user"
     },
     "notFound": {
       "whoopsError": "افوہ! لگتا ہے کچھ پنگا ہوگیا۔",
@@ -81,14 +86,14 @@
     "soundEffectSettings": { "header": "آواز کی ترتیبات" },
     "viewUser": {
       "editProfile": "پروفائل میں ترمیم کریں",
-      "followsYou": "آپ کے پیچھے",
-      "followers": "پیروکار",
-      "following": "درج ذیل",
+      "followsYou": "آپ کو فالو کیا ہوا ہے",
+      "followers": "فالور",
+      "following": "فالونگ",
       "followHim": "فالو کریں",
       "followingHim": "فالونگ",
       "copyProfileUrl": "کاپی پروفائل یو آر ایل",
       "urlCopied": "یو آر ایل کو کلپ بورڈ میں کاپی کیا گیا",
-      "unfollow": "Unfollow"
+      "unfollow": "ان فالو کریں"
     },
     "voiceSettings": {
       "header": "آواز کی ترتیبات",
@@ -160,7 +165,8 @@
         "roomName": "کمرے کا نام",
         "roomDescription": "کمرے کی تفصیل",
         "descriptionError": "زیادہ سے زیادہ لمبائی 500",
-        "nameError": "2 سے 60 حروف کے درمیان لمبا ہونا چاہئے"
+        "nameError": "2 سے 60 حروف کے درمیان لمبا ہونا چاہئے",
+        "subtitle": "Fill the following fields to start a new room"
       },
       "invitedToJoinRoomModal": {
         "newRoomCreated": "نیا کمرہ تشکیل دیا گیا",
@@ -196,7 +202,30 @@
       "roomSettingsModal": {
         "requirePermission": "بولنے کی اجازت کی ضرورت ہے",
         "makePublic": "کمرے کو عوامی بنائیں",
-        "makePrivate": "کمرے کو نجی بنائیں"
+        "makePrivate": "کمرے کو نجی بنائیں",
+        "renamePublic": "Set public room name",
+        "renamePrivate": "Set private room name"
+      }
+    },
+    "followingOnline": {
+      "people": "People",
+      "online": "ONLINE",
+      "noOnline": "You have 0 friends online right now",
+      "showMore": "Show more"
+    },
+    "upcomingRoomsCard": {
+      "upcomingRooms": "Upcoming rooms",
+      "exploreMoreRooms": "Explore More Rooms"
+    },
+    "search": { "placeholder": "Search for rooms, users or categories" },
+    "settingsDropdown": {
+      "profile": "Profile",
+      "language": "Language",
+      "reportABug": "Report A Bug",
+      "useOldVersion": "Use Old Version",
+      "logOut": {
+        "button": "Log out",
+        "modalSubtitle": "Are you sure you want to logout?"
       }
     }
   },
@@ -240,6 +269,7 @@
       "approachingGalaxy": "Approaching galaxy",
       "galacticDoge": "Galactic Doge",
       "spottedLife": "Planet with life spotted"
-    }
+    },
+    "feed": { "yourFeed": "Your Feed" }
   }
 }

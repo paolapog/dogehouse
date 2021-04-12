@@ -38,7 +38,11 @@
       "startPrivateRoom": "An neichn Raum mit dem Benutzer starten"
     },
     "followList": { "followHim": "follow", "followingHim": "following" },
-    "home": { "createRoom": "Raum erstön", "refresh": "Aktualisiern" },
+    "home": {
+      "createRoom": "Raum erstön",
+      "refresh": "Aktualisiern",
+      "editRoom": "Edit Room"
+    },
     "inviteList": {
       "roomGone": "Den Raum kau ma ned finden. Zruck",
       "shareRoomLink": "Link zum Raum teilen",
@@ -63,7 +67,8 @@
       "voiceSettings": "Sprocheinstöllungen",
       "soundSettings": "Toneinstöllungen",
       "deleteAccount": "Konto löschn",
-      "overlaySettings": "go to overlay settings"
+      "overlaySettings": "go to overlay settings",
+      "couldNotFindUser": "Sorry, we could not find that user"
     },
     "notFound": {
       "whoopsError": "Oida! De Seite ist im Gespräch verlurn gaunga.",
@@ -142,7 +147,8 @@
         "roomName": "Raumnaum",
         "roomDescription": "Raumbeschreibung",
         "descriptionError": "de maximale Länge is 500",
-        "nameError": "muas zwischen 2 und 60 Zeichn laung sei"
+        "nameError": "muas zwischen 2 und 60 Zeichn laung sei",
+        "subtitle": "Fill the following fields to start a new room"
       },
       "invitedToJoinRoomModal": {
         "newRoomCreated": "Neichn Raum erstöt",
@@ -178,7 +184,9 @@
       "roomSettingsModal": {
         "requirePermission": "Berechtigung zum Sprechen verlaungen",
         "makePublic": "Raum öffentlich mochen",
-        "makePrivate": "Raum privat mochen"
+        "makePrivate": "Raum privat mochen",
+        "renamePublic": "Set public room name",
+        "renamePrivate": "Set private room name"
       }
     },
     "userVolumeSlider": {
@@ -203,6 +211,27 @@
     "inviteButton": {
       "invited": "einglondt",
       "inviteToRoom": "zum Raum eilona"
+    },
+    "followingOnline": {
+      "people": "People",
+      "online": "ONLINE",
+      "noOnline": "You have 0 friends online right now",
+      "showMore": "Show more"
+    },
+    "upcomingRoomsCard": {
+      "upcomingRooms": "Upcoming rooms",
+      "exploreMoreRooms": "Explore More Rooms"
+    },
+    "search": { "placeholder": "Search for rooms, users or categories" },
+    "settingsDropdown": {
+      "profile": "Profile",
+      "language": "Language",
+      "reportABug": "Report A Bug",
+      "useOldVersion": "Use Old Version",
+      "logOut": {
+        "button": "Log out",
+        "modalSubtitle": "Are you sure you want to logout?"
+      }
     }
   },
   "modules": {
@@ -245,6 +274,7 @@
       "approachingGalaxy": "Approaching galaxy",
       "galacticDoge": "Galactic Doge",
       "spottedLife": "Planet with life spotted"
-    }
+    },
+    "feed": { "yourFeed": "Your Feed" }
   }
 }

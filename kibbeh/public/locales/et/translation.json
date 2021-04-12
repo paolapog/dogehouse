@@ -16,7 +16,7 @@
     "copied": "kopeeritud",
     "formattedIntlDate": "{{date, intlDate}}",
     "formattedIntlTime": "{{time, intlTime}}",
-    "requestPermissions": "Please note running DogeHouse without accessibility permissions may cause unwanted errors"
+    "requestPermissions": "Pange tähele, et DogeHouse'i käitamine ilma juurdepääsulubadeta võib põhjustada soovimatuid vigu"
   },
   "header": {
     "_comment": "Main Header UI Internationalization Strings",
@@ -38,7 +38,11 @@
       "startPrivateRoom": "loo nendega privaatne ruum"
     },
     "followList": { "followHim": "jälgi", "followingHim": "jälgid" },
-    "home": { "createRoom": "Loo ruum", "refresh": "Värskenda" },
+    "home": {
+      "createRoom": "Loo ruum",
+      "refresh": "Värskenda",
+      "editRoom": "Edit Room"
+    },
     "inviteList": {
       "roomGone": "ruum läinud, mine tagasi",
       "shareRoomLink": "jaga link ruumi",
@@ -63,7 +67,8 @@
       "voiceSettings": "mine häälesätetesse",
       "overlaySettings": "go to overlay settings",
       "soundSettings": "mine helisätetesse",
-      "deleteAccount": "kustuta konto"
+      "deleteAccount": "kustuta konto",
+      "couldNotFindUser": "Sorry, we could not find that user"
     },
     "notFound": {
       "whoopsError": "Oih! See leht läks vestluses kaduma.",
@@ -99,7 +104,7 @@
     },
     "overlaySettings": {
       "input": { "errorMsg": "Invalid app title", "label": "Enter App Title" },
-      "header": "Overlay Settings"
+      "header": "Ülekatte Sätted"
     }
   },
   "components": {
@@ -159,7 +164,8 @@
         "roomName": "ruumi nimi",
         "roomDescription": "ruumi kirjeldus",
         "descriptionError": "max. pikkus 500",
-        "nameError": "peab olema 2 kuni 60 tähemärki pikk"
+        "nameError": "peab olema 2 kuni 60 tähemärki pikk",
+        "subtitle": "Fill the following fields to start a new room"
       },
       "invitedToJoinRoomModal": {
         "newRoomCreated": "Uus ruum loodud",
@@ -195,7 +201,30 @@
       "roomSettingsModal": {
         "requirePermission": "nõua luba rääkimiseks",
         "makePublic": "tee ruum avalikuks",
-        "makePrivate": "tee ruum privaatseks"
+        "makePrivate": "tee ruum privaatseks",
+        "renamePublic": "Säti avaliku ruumi nimi",
+        "renamePrivate": "Säti privaatse ruumi nimi"
+      }
+    },
+    "followingOnline": {
+      "people": "People",
+      "online": "ONLINE",
+      "noOnline": "You have 0 friends online right now",
+      "showMore": "Show more"
+    },
+    "upcomingRoomsCard": {
+      "upcomingRooms": "Upcoming rooms",
+      "exploreMoreRooms": "Explore More Rooms"
+    },
+    "search": { "placeholder": "Search for rooms, users or categories" },
+    "settingsDropdown": {
+      "profile": "Profile",
+      "language": "Language",
+      "reportABug": "Report A Bug",
+      "useOldVersion": "Use Old Version",
+      "logOut": {
+        "button": "Log out",
+        "modalSubtitle": "Are you sure you want to logout?"
       }
     }
   },
@@ -233,12 +262,13 @@
       "takingOff": "Startimas",
       "inSpace": "Kosmoses",
       "approachingMoon": "Lähenemas Kuule",
-      "lunarDoge": "Lunar doge",
+      "lunarDoge": "Kuu-doge",
       "approachingSun": "Lähenemas Päikesele",
       "solarDoge": "Päikese-Doge",
       "approachingGalaxy": "Lähenemas galaktikale",
       "galacticDoge": "Galaktiline-Doge",
       "spottedLife": "Planeet eluga"
-    }
+    },
+    "feed": { "yourFeed": "Your Feed" }
   }
 }

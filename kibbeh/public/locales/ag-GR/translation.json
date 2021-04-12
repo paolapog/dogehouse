@@ -38,7 +38,11 @@
       "startPrivateRoom": "δημιουργήστε ένα ιδιωτικό δωμάτιο μαζί τους"
     },
     "followList": { "followHim": "follow", "followingHim": "following" },
-    "home": { "createRoom": "Δημιουργία Δωματίου", "refresh": "Επαναφόρτωση" },
+    "home": {
+      "createRoom": "Δημιουργία Δωματίου",
+      "refresh": "Επαναφόρτωση",
+      "editRoom": "Edit Room"
+    },
     "inviteList": {
       "roomGone": "το δωμάτιο διαγράφηκε, πηγαίνετε πίσω",
       "shareRoomLink": "κοινοποιήστε τον σύνδεσμο του δωματίου",
@@ -63,7 +67,8 @@
       "voiceSettings": "πηγαίνετε στις ρυθμίσεις φωνής",
       "soundSettings": "πηγαίνετε στις ρυθμίσεις ήχου",
       "deleteAccount": "διαγραφή λογαριασμού",
-      "overlaySettings": "go to overlay settings"
+      "overlaySettings": "go to overlay settings",
+      "couldNotFindUser": "Sorry, we could not find that user"
     },
     "notFound": {
       "whoopsError": "Ουπς! Αυτή η σελίδα χάθηκε στη συζήτηση.",
@@ -165,7 +170,8 @@
         "roomName": "όνομα δωματίου",
         "roomDescription": "περιγραφή δωματίου",
         "descriptionError": "μέγιστο μήκος 500",
-        "nameError": "πρέπει να έχει μήκος μεταξύ 2 και 60 χαρακτήρων"
+        "nameError": "πρέπει να έχει μήκος μεταξύ 2 και 60 χαρακτήρων",
+        "subtitle": "Fill the following fields to start a new room"
       },
       "invitedToJoinRoomModal": {
         "newRoomCreated": "Δημιουργήθηκε Νέο Δωμάτιο",
@@ -201,7 +207,30 @@
       "roomSettingsModal": {
         "requirePermission": "απαίτηση άδειας για ομιλία",
         "makePublic": "κάντε το δωμάτιο δημόσιο",
-        "makePrivate": "κάντε το δωμάτιο ιδιωτικό"
+        "makePrivate": "κάντε το δωμάτιο ιδιωτικό",
+        "renamePublic": "Set public room name",
+        "renamePrivate": "Set private room name"
+      }
+    },
+    "followingOnline": {
+      "people": "People",
+      "online": "ONLINE",
+      "noOnline": "You have 0 friends online right now",
+      "showMore": "Show more"
+    },
+    "upcomingRoomsCard": {
+      "upcomingRooms": "Upcoming rooms",
+      "exploreMoreRooms": "Explore More Rooms"
+    },
+    "search": { "placeholder": "Search for rooms, users or categories" },
+    "settingsDropdown": {
+      "profile": "Profile",
+      "language": "Language",
+      "reportABug": "Report A Bug",
+      "useOldVersion": "Use Old Version",
+      "logOut": {
+        "button": "Log out",
+        "modalSubtitle": "Are you sure you want to logout?"
       }
     }
   },
@@ -245,6 +274,7 @@
       "approachingGalaxy": "Πλησιάζουμε τον Γαλαξία",
       "galacticDoge": "Γαλαξιακό Doge",
       "spottedLife": "Εντοπίστηκε πλανήτης με ζωή"
-    }
+    },
+    "feed": { "yourFeed": "Your Feed" }
   }
 }

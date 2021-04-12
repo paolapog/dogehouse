@@ -37,11 +37,12 @@
       "currentRoom": "қазір :",
       "startPrivateRoom": "Олармен жабық бөлме ашу"
     },
-    "followList": {
-      "followHim": "жазылу",
-      "followingHim": "Сіз жазылдыңыз"
+    "followList": { "followHim": "жазылу", "followingHim": "Сіз жазылдыңыз" },
+    "home": {
+      "createRoom": "Бөлме ашу",
+      "refresh": "Жаңарту",
+      "editRoom": "Edit Room"
     },
-    "home": { "createRoom": "Бөлме ашу", "refresh": "Жаңарту" },
     "inviteList": {
       "roomGone": "Бөлме жойылып кетті, артқа қайтыңыз",
       "shareRoomLink": "Бөлменің сілтемесімен бөлісу",
@@ -101,7 +102,10 @@
       "volume": "Қаттылығы:"
     },
     "overlaySettings": {
-      "input": { "errorMsg": "Қолданба тақырыбы жарамсыз", "label": "Қолданба тақырыбын еңгізіңіз" },
+      "input": {
+        "errorMsg": "Қолданба тақырыбы жарамсыз",
+        "label": "Қолданба тақырыбын еңгізіңіз"
+      },
       "header": "Қабаттасу (Overlay) баптамалары"
     }
   },
@@ -199,7 +203,9 @@
       "roomSettingsModal": {
         "requirePermission": "Мұнда сөйлеу үшін рұқсат алу қажет",
         "makePublic": "бөлмені жариялы ету",
-        "makePrivate": "бөлмені жеке қылдыру"
+        "makePrivate": "бөлмені жеке қылдыру",
+        "renamePublic": "Set public room name",
+        "renamePrivate": "Set private room name"
       }
     }
   },

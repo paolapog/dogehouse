@@ -37,7 +37,11 @@
       "startPrivateRoom": "उनके साथ एक प्राइवेट रूम शुरू करें"
     },
     "followList": { "followHim": "follow", "followingHim": "following" },
-    "home": { "createRoom": "रूम बनाये", "refresh": "Refresh" },
+    "home": {
+      "createRoom": "रूम बनाये",
+      "refresh": "Refresh",
+      "editRoom": "Edit Room"
+    },
     "inviteList": {
       "roomGone": "रूम गया, वापस जाए",
       "shareRoomLink": "रूम की लिंक शेयर करें",
@@ -52,8 +56,8 @@
       "featureText_4": "Open Source",
       "featureText_5": "Text Chat",
       "featureText_6": "Powered by Doge",
-      "loginGithub": "login with GitHub",
-      "loginTwitter": "login with Twitter",
+      "loginGithub": "log in with GitHub",
+      "loginTwitter": "log in with Twitter",
       "createTestUser": "create test user"
     },
     "myProfile": {
@@ -62,7 +66,8 @@
       "voiceSettings": "वॉइस सेटिंग्स में जाएं",
       "soundSettings": "साउंड सेटिंग में जाएं",
       "deleteAccount": "खाता हटाएं",
-      "overlaySettings": "go to overlay settings"
+      "overlaySettings": "go to overlay settings",
+      "couldNotFindUser": "Sorry, we could not find that user"
     },
     "notFound": {
       "whoopsError": "Whoops! This page got lost in conversation.",
@@ -158,7 +163,8 @@
         "roomName": "रूम का नाम",
         "roomDescription": "रूम के बारे में",
         "descriptionError": "500 अक्षर से कम ",
-        "nameError": "2 अक्षर से जयादा और 60 अक्षर से कम के बीच में होने चाहए"
+        "nameError": "2 अक्षर से जयादा और 60 अक्षर से कम के बीच में होने चाहए",
+        "subtitle": "Fill the following fields to start a new room"
       },
       "invitedToJoinRoomModal": {
         "newRoomCreated": "नया रूम बन गया है",
@@ -194,7 +200,30 @@
       "roomSettingsModal": {
         "requirePermission": "बोलने की अनुमति की आवश्यकता है",
         "makePublic": "रूम को सार्वजनिक करें",
-        "makePrivate": "रूम को प्राइवेट करें!"
+        "makePrivate": "रूम को प्राइवेट करें!",
+        "renamePublic": "Set public room name",
+        "renamePrivate": "Set private room name"
+      }
+    },
+    "followingOnline": {
+      "people": "People",
+      "online": "ONLINE",
+      "noOnline": "You have 0 friends online right now",
+      "showMore": "Show more"
+    },
+    "upcomingRoomsCard": {
+      "upcomingRooms": "Upcoming rooms",
+      "exploreMoreRooms": "Explore More Rooms"
+    },
+    "search": { "placeholder": "Search for rooms, users or categories" },
+    "settingsDropdown": {
+      "profile": "Profile",
+      "language": "Language",
+      "reportABug": "Report A Bug",
+      "useOldVersion": "Use Old Version",
+      "logOut": {
+        "button": "Log out",
+        "modalSubtitle": "Are you sure you want to logout?"
       }
     }
   },
@@ -238,6 +267,7 @@
       "approachingGalaxy": "Approaching galaxy",
       "galacticDoge": "Galactic Doge",
       "spottedLife": "Planet with life spotted"
-    }
+    },
+    "feed": { "yourFeed": "Your Feed" }
   }
 }

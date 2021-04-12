@@ -38,7 +38,11 @@
       "startPrivateRoom": "Sukurti privatų kambarį su jais"
     },
     "followList": { "followHim": "follow", "followingHim": "following" },
-    "home": { "createRoom": "Sukurti kambarį", "refresh": "Refresh" },
+    "home": {
+      "createRoom": "Sukurti kambarį",
+      "refresh": "Refresh",
+      "editRoom": "Edit Room"
+    },
     "inviteList": {
       "roomGone": "Kambario nebėra, grįžkite atgal",
       "shareRoomLink": "Pasidalinkite nuoroda į kambarį",
@@ -63,7 +67,8 @@
       "voiceSettings": "Eiti į balso nustatymus",
       "soundSettings": "Eiti į garso nustatymus",
       "deleteAccount": "Ištrinti vartotoją",
-      "overlaySettings": "go to overlay settings"
+      "overlaySettings": "go to overlay settings",
+      "couldNotFindUser": "Sorry, we could not find that user"
     },
     "notFound": {
       "whoopsError": "Uppss! Šis puslapis buvo prarastas pokalbyje",
@@ -162,7 +167,8 @@
         "roomName": "Kambario pavadinimas",
         "roomDescription": "Kambario aprašymas",
         "descriptionError": "Didžiausias teksto ilgis yra 500 raidžių",
-        "nameError": "Turi būti nuo 2 iki 60 raidžių ilgio"
+        "nameError": "Turi būti nuo 2 iki 60 raidžių ilgio",
+        "subtitle": "Fill the following fields to start a new room"
       },
       "invitedToJoinRoomModal": {
         "newRoomCreated": "Naujas kambarys sukurtas",
@@ -198,7 +204,30 @@
       "roomSettingsModal": {
         "requirePermission": "Reikalingas patvirtinimas kalbėti",
         "makePublic": "Padaryti kambarį viešą",
-        "makePrivate": "Padaryti kambarį privatų"
+        "makePrivate": "Padaryti kambarį privatų",
+        "renamePublic": "Set public room name",
+        "renamePrivate": "Set private room name"
+      }
+    },
+    "followingOnline": {
+      "people": "People",
+      "online": "ONLINE",
+      "noOnline": "You have 0 friends online right now",
+      "showMore": "Show more"
+    },
+    "upcomingRoomsCard": {
+      "upcomingRooms": "Upcoming rooms",
+      "exploreMoreRooms": "Explore More Rooms"
+    },
+    "search": { "placeholder": "Search for rooms, users or categories" },
+    "settingsDropdown": {
+      "profile": "Profile",
+      "language": "Language",
+      "reportABug": "Report A Bug",
+      "useOldVersion": "Use Old Version",
+      "logOut": {
+        "button": "Log out",
+        "modalSubtitle": "Are you sure you want to logout?"
       }
     }
   },
@@ -242,6 +271,7 @@
       "approachingGalaxy": "Approaching galaxy",
       "galacticDoge": "Galactic Doge",
       "spottedLife": "Planet with life spotted"
-    }
+    },
+    "feed": { "yourFeed": "Your Feed" }
   }
 }

@@ -38,7 +38,11 @@
       "startPrivateRoom": "شروع اتاق شخصی"
     },
     "followList": { "followHim": "follow", "followingHim": "following" },
-    "home": { "createRoom": "ساختن اتاق", "refresh": "تازه کردن" },
+    "home": {
+      "createRoom": "ساختن اتاق",
+      "refresh": "تازه کردن",
+      "editRoom": "Edit Room"
+    },
     "inviteList": {
       "roomGone": "اتاق گم شد. برگردید",
       "shareRoomLink": "اشتراک لینک اتاق",
@@ -63,7 +67,8 @@
       "voiceSettings": "رفتن به تنظیمات میکروفون",
       "soundSettings": "رفتن به تنظیمات صدا",
       "deleteAccount": "حذف حساب",
-      "overlaySettings": "go to overlay settings"
+      "overlaySettings": "go to overlay settings",
+      "couldNotFindUser": "Sorry, we could not find that user"
     },
     "notFound": {
       "whoopsError": "ای وای ! صفحه مورد نظر پیدا نشد",
@@ -160,7 +165,8 @@
         "roomName": "نام اتاق",
         "roomDescription": "توضیحات اتاق",
         "descriptionError": "حداکثر طول 500",
-        "nameError": "باید بین 2 تا 60 کاراکتر باشد"
+        "nameError": "باید بین 2 تا 60 کاراکتر باشد",
+        "subtitle": "Fill the following fields to start a new room"
       },
       "invitedToJoinRoomModal": {
         "newRoomCreated": "اتاق جدید ساخته شد",
@@ -196,7 +202,30 @@
       "roomSettingsModal": {
         "requirePermission": "نیاز به دسترسی برای حرف زدن",
         "makePublic": "تبدیل به اتاق عمومی",
-        "makePrivate": "تبدیل به اتاق خصوصی"
+        "makePrivate": "تبدیل به اتاق خصوصی",
+        "renamePublic": "Set public room name",
+        "renamePrivate": "Set private room name"
+      }
+    },
+    "followingOnline": {
+      "people": "People",
+      "online": "ONLINE",
+      "noOnline": "You have 0 friends online right now",
+      "showMore": "Show more"
+    },
+    "upcomingRoomsCard": {
+      "upcomingRooms": "Upcoming rooms",
+      "exploreMoreRooms": "Explore More Rooms"
+    },
+    "search": { "placeholder": "Search for rooms, users or categories" },
+    "settingsDropdown": {
+      "profile": "Profile",
+      "language": "Language",
+      "reportABug": "Report A Bug",
+      "useOldVersion": "Use Old Version",
+      "logOut": {
+        "button": "Log out",
+        "modalSubtitle": "Are you sure you want to logout?"
       }
     }
   },
@@ -240,6 +269,7 @@
       "approachingGalaxy": "درحال نزدیک شدن به کهکشان",
       "galacticDoge": "Doge کهکشانی",
       "spottedLife": "سیاره دارای حیات رویت شد"
-    }
+    },
+    "feed": { "yourFeed": "Your Feed" }
   }
 }
